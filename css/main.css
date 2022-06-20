@@ -1,0 +1,332 @@
+/*FUENTES*/
+@font-face {
+    font-family: "TrebuchtMS";
+    src: url("../css/fonts/TrebuchetMS.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url('../css/fonts/BebasNeue.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color1: rgb(219, 144, .5);
+    --color2: rgba(23, 180, 83, .0788);
+    --color3: rgba(11, 194, 211, 0.623);
+}
+
+body {
+    background: url("../img/pattern.png");
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+header {
+    margin: 30px;
+    padding: 30px;
+}
+
+main {
+    margin: 30px;
+    padding: 30px;
+}
+
+#sombra {
+    box-shadow: 0px 0px 35px gray;
+}
+
+/* ESTILOS LOGO */
+#logo {
+    float: left;
+    width: 400px;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 300ms;
+}
+
+#logo img {
+    width: 300px;
+}
+
+
+/* ESTILOS MENU */
+#menu {
+    margin-left: 200px;
+
+}
+
+.navbar-nav a {
+    font-weight: bolder;
+    transition: 1s;
+}
+
+#menu ul li a:hover {
+    color: var(--color1);
+    transform: scale(1.2, 1.2);
+}
+
+#menu .navbar-brand:hover {
+    color: var(--color1);
+    transform: scale(1.2, 1.2);
+    transition: 1s;
+}
+
+/*BANNER*/
+#banner {
+    width: 95.5%;
+    height: 100px;
+    display: flex;
+    border: 10px solid white;
+    box-shadow: 0px 0px 2px gray;
+    background: url("../img/banerNaranja.jpg");
+    background-position: -200px -200px;
+    margin: 20px auto;
+    overflow: hidden;
+    /*animacion*/
+    animation: backBanner 10s linear;
+    align-items: center;
+
+}
+
+@keyframes backBanner {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    100% {
+        background-position: -200px -200px;
+    }
+}
+
+#banner h1 {
+    display: block;
+    text-align: center;
+    width: 850px;
+    font-family: "BebasNeue";
+    color: white;
+    font-size: 55px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 1px black;
+    margin: 27px auto;
+    animation: showText 10s linear;
+}
+
+@keyframes showText {
+    0% {
+        transform: translateX(-600%) scale(5, 5);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(600%) scale(5, 5);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateX(-600%) scale(5, 5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%) scale(1, 1);
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        opacity: 1;
+    }
+}
+
+/* ESTILOS CARRUSEL */
+#carousel-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.carousel-inner .carousel-item img {
+    margin: auto;
+    width: 80%;
+}
+
+
+/* ESTILOS NOSOTROS */
+.container .textoNosotros .nos {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.container .textoNosotros p {
+    font-size: x-large;
+}
+
+.staff img {
+    width: 100%;
+    height: 350px;
+}
+
+.container h2 {
+    font-weight: bold;
+}
+
+.container h2,
+h4,
+p {
+    color: var(--color1);
+    text-align: center;
+}
+
+/* ESTILOS FOOTER */
+
+footer {
+    height: auto;
+    padding: 10px;
+    margin-top: 100px;
+    text-align: center;
+    background-color: black;
+}
+
+/* ESTILOS DE GALERIA */
+.galery img {
+    transition: 1s;
+}
+
+.galery img:hover {
+    transform: scale(1.5);
+}
+
+/* ESTILOS CONTACTO */
+.mapa {
+
+    flex: 30%;
+}
+
+.mapa iframe {
+    width: 95%;
+    height: 450px;
+    margin: 10px;
+    border-radius: 15px;
+    border: 5px solid white;
+    box-shadow: 0px 0px 15px gray;
+}
+
+#contenedorContaco h5 {
+    display: block;
+    background: url(../img/pxgray.png) white;
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 55px;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.formulario fieldset {
+    border-radius: 15px;
+    border: 2px solid rgb(219, 144, .5);
+    padding: 5px;
+}
+
+.formulario fieldset input {
+    width: 350px;
+    height: 40px;
+    padding: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    align-items: baseline;
+    margin: 3px;
+    font-weight: bold;
+}
+
+.formulario fieldset textarea {
+    width: 350px;
+    height: auto;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* MEDIAS QUERIS */
+
+@media (min-width: 326px) and (max-width: 550px) {
+
+ 
+    #logo img {
+        margin-left: 60px;
+    }
+
+
+    #banner {
+        height: 85px;
+    }
+
+    #banner h1 {
+        font-size: 30px;
+    }
+
+}
+
+@media (min-width: 551px) and (max-width: 768px) {
+
+
+    #logo img {
+        margin-left: auto;
+    }
+
+
+    #banner {
+        height: 90px;
+    }
+
+    #banner h1 {
+        font-size: 30px;
+    }
+
+    #row {
+        width: 70%;
+    }
+
+    .formulario fieldset input {
+        width: 90%;
+
+    }
+
+    .btn {
+        display: flex;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+    #logo img {
+        width: 200px;
+    }
+
+    .formulario fieldset input {
+        width: 90%;
+
+    }
+    .formulario fieldset textarea {
+        width: 80%;
+    }
+    .btn {
+        display: flex;
+    }
+
+    #banner h1 {
+        font-size: 40px;
+    }
+}
